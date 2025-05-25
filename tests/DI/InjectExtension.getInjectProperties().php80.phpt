@@ -34,5 +34,8 @@ Assert::exception(
 );
 
 Assert::same([
-	'varA' => 'stdClass',
+	'varA' => [
+		'type' => 'stdClass',
+		'tag' => null,
+	],
 ], InjectExtension::getInjectProperties(EClass::class));
