@@ -33,7 +33,13 @@ namespace {
 
 
 	Assert::same([
-		'varA' => A\AInjected::class,
-		'varC' => A\AInjected::class,
+		'varA' => [
+			'type' => A\AInjected::class,
+			'tag' => null,
+		],
+		'varC' => [
+			'type' => A\AInjected::class,
+			'tag' => null,
+		],
 	], InjectExtension::getInjectProperties(A\AClass::class));
 }
